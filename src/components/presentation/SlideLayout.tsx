@@ -1,34 +1,36 @@
 import { ReactNode } from "react";
 import { ChevronLeft, ChevronRight, Globe, Phone, Mail, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface SlideLayoutProps {
   children: ReactNode;
   currentSlide: number;
   totalSlides: number;
-  onPrevious: () => void;
-  onNext: () => void;
   showNavigation?: boolean;
 }
+
+const TOTAL_SLIDES = 18;
 
 const SlideLayout = ({
   children,
   currentSlide,
-  totalSlides,
-  onPrevious,
-  onNext,
+  totalSlides = TOTAL_SLIDES,
   showNavigation = true,
 }: SlideLayoutProps) => {
+  const prevSlide = currentSlide > 1 ? `/slide/${currentSlide - 1}` : null;
+  const nextSlide = currentSlide < totalSlides ? `/slide/${currentSlide + 1}` : null;
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       {/* Header */}
       <header className="h-16 border-b border-border bg-card flex items-center justify-between px-6">
-        <div className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
           <div className="w-10 h-10 solar-gradient rounded-lg flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-lg">U</span>
           </div>
           <span className="font-display font-semibold text-lg text-foreground">Unite Solar</span>
-        </div>
+        </Link>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <span className="font-medium text-foreground">{currentSlide}</span>
           <span>/</span>
@@ -38,7 +40,7 @@ const SlideLayout = ({
 
       {/* Main Content */}
       <main className="flex-1 overflow-auto">
-        <div className="animate-fade-in" key={currentSlide}>
+        <div className="animate-fade-in">
           {children}
         </div>
       </main>
@@ -78,25 +80,32 @@ const SlideLayout = ({
 
           {showNavigation && (
             <div className="flex items-center gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={onPrevious}
-                disabled={currentSlide === 1}
-                className="gap-1"
-              >
-                <ChevronLeft className="w-4 h-4" />
-                Previous
-              </Button>
-              <Button
-                size="sm"
-                onClick={onNext}
-                disabled={currentSlide === totalSlides}
-                className="gap-1 bg-primary hover:bg-primary/90"
-              >
-                Next
-                <ChevronRight className="w-4 h-4" />
-              </Button>
+              {prevSlide ? (
+                <Button variant="outline" size="sm" asChild className="gap-1">
+                  <Link to={prevSlide}>
+                    <ChevronLeft className="w-4 h-4" />
+                    Previous
+                  </Link>
+                </Button>
+              ) : (
+                <Button variant="outline" size="sm" disabled className="gap-1">
+                  <ChevronLeft className="w-4 h-4" />
+                  Previous
+                </Button>
+              )}
+              {nextSlide ? (
+                <Button size="sm" asChild className="gap-1 bg-primary hover:bg-primary/90">
+                  <Link to={nextSlide}>
+                    Next
+                    <ChevronRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+              ) : (
+                <Button size="sm" disabled className="gap-1 bg-primary hover:bg-primary/90">
+                  Next
+                  <ChevronRight className="w-4 h-4" />
+                </Button>
+              )}
             </div>
           )}
         </div>
