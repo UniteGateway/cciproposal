@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { ChevronLeft, ChevronRight, Globe, Phone, Mail, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
+import SlideMenu from "./SlideMenu";
 interface SlideLayoutProps {
   children: ReactNode;
   currentSlide: number;
@@ -25,12 +25,15 @@ const SlideLayout = ({
     <div className="min-h-screen flex flex-col bg-background">
       {/* Header */}
       <header className="h-16 border-b border-border bg-card flex items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <div className="w-10 h-10 solar-gradient rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">U</span>
-          </div>
-          <span className="font-display font-semibold text-lg text-foreground">Unite Solar</span>
-        </Link>
+        <div className="flex items-center gap-6">
+          <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <div className="w-10 h-10 solar-gradient rounded-lg flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-lg">U</span>
+            </div>
+            <span className="font-display font-semibold text-lg text-foreground">Unite Solar</span>
+          </Link>
+          <SlideMenu />
+        </div>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <span className="font-medium text-foreground">{currentSlide}</span>
           <span>/</span>
