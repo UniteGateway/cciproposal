@@ -24,60 +24,60 @@ const landDetails = [
 
 const Slide04LandAvailability = () => {
   return (
-    <div className="min-h-[calc(100vh-7.5rem)] px-6 py-12">
-      <div className="max-w-6xl mx-auto space-y-10">
+    <div className="min-h-[calc(100vh-7rem)] md:min-h-[calc(100vh-7.5rem)] px-4 md:px-6 py-8 md:py-12">
+      <div className="max-w-6xl mx-auto space-y-6 md:space-y-10">
         {/* Header */}
-        <div className="text-center space-y-4">
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">
+        <div className="text-center space-y-3 md:space-y-4">
+          <span className="inline-block px-3 md:px-4 py-1 md:py-1.5 bg-primary/10 text-primary rounded-full text-xs md:text-sm font-medium">
             Project Scale
           </span>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground">
             Land <span className="solar-gradient-text">Availability</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Adequate land resources to support a large-scale captive solar installation
           </p>
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-center">
           {/* Left - Visual */}
           <div className="relative">
             <div 
-              className="h-80 rounded-2xl bg-cover bg-center"
+              className="h-56 md:h-80 rounded-xl md:rounded-2xl bg-cover bg-center"
               style={{
                 backgroundImage: `url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&q=80')`,
               }}
             />
-            <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-xl p-4 shadow-lg">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full solar-gradient flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-primary-foreground" />
+            <div className="absolute -bottom-3 -right-2 md:-bottom-4 md:-right-4 bg-card border border-border rounded-lg md:rounded-xl p-3 md:p-4 shadow-lg">
+              <div className="flex items-center gap-2 md:gap-3">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full solar-gradient flex items-center justify-center">
+                  <MapPin className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-foreground">CCI Thandur</div>
-                  <div className="text-sm text-muted-foreground">Project Location</div>
+                  <div className="text-lg md:text-2xl font-bold text-foreground">CCI Thandur</div>
+                  <div className="text-xs md:text-sm text-muted-foreground">Project Location</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right - Details */}
-          <div className="space-y-6">
-            {landDetails.map((detail, index) => (
+          <div className="space-y-4 md:space-y-6 mt-4 lg:mt-0">
+            {landDetails.map((detail) => (
               <Card 
                 key={detail.label}
                 className="border-border bg-card hover:shadow-md transition-shadow"
               >
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-14 h-14 rounded-xl solar-gradient flex items-center justify-center flex-shrink-0">
-                      <detail.icon className="w-7 h-7 text-primary-foreground" />
+                <CardContent className="p-4 md:p-6">
+                  <div className="flex items-start gap-3 md:gap-4">
+                    <div className="w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-xl solar-gradient flex items-center justify-center flex-shrink-0">
+                      <detail.icon className="w-5 h-5 md:w-7 md:h-7 text-primary-foreground" />
                     </div>
                     <div className="flex-1">
-                      <div className="text-sm text-muted-foreground">{detail.label}</div>
-                      <div className="text-3xl font-display font-bold text-foreground">{detail.value}</div>
-                      <div className="text-sm text-muted-foreground mt-1">{detail.description}</div>
+                      <div className="text-xs md:text-sm text-muted-foreground">{detail.label}</div>
+                      <div className="text-xl md:text-3xl font-display font-bold text-foreground">{detail.value}</div>
+                      <div className="text-xs md:text-sm text-muted-foreground mt-1">{detail.description}</div>
                     </div>
                   </div>
                 </CardContent>
@@ -87,11 +87,10 @@ const Slide04LandAvailability = () => {
         </div>
 
         {/* Bottom Note */}
-        <div className="text-center p-6 bg-secondary rounded-xl">
-          <p className="text-muted-foreground">
+        <div className="text-center p-4 md:p-6 bg-secondary rounded-xl">
+          <p className="text-xs md:text-sm text-muted-foreground">
             <span className="font-semibold text-foreground">Note:</span> Land utilization follows 
-            industry-standard 4-5 acres per MW for ground-mounted solar installations with adequate 
-            spacing for maintenance access and optimal panel performance.
+            industry-standard 4-5 acres per MW for ground-mounted solar installations.
           </p>
         </div>
       </div>

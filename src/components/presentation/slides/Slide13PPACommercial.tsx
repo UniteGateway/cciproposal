@@ -13,48 +13,65 @@ const savingsData = [
 
 const Slide13PPACommercial = () => {
   return (
-    <div className="min-h-[calc(100vh-7.5rem)] px-6 py-12">
-      <div className="max-w-6xl mx-auto space-y-10">
+    <div className="min-h-[calc(100vh-7rem)] md:min-h-[calc(100vh-7.5rem)] px-4 md:px-6 py-8 md:py-12">
+      <div className="max-w-6xl mx-auto space-y-6 md:space-y-10">
         {/* Header */}
-        <div className="text-center space-y-4">
-          <span className="inline-block px-4 py-1.5 bg-solar-blue/10 text-solar-blue rounded-full text-sm font-medium">
+        <div className="text-center space-y-3 md:space-y-4">
+          <span className="inline-block px-3 md:px-4 py-1 md:py-1.5 bg-solar-blue/10 text-solar-blue rounded-full text-xs md:text-sm font-medium">
             PPA Model
           </span>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground">
             Commercial <span className="solar-gradient-text">Terms & Savings</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto">
             26% discount on prevailing DISCOM tariff with protection against future tariff hikes
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        {/* Key Metrics - Mobile First */}
+        <div className="grid grid-cols-3 gap-2 md:hidden">
+          <Card className="border-primary/30 bg-primary/5">
+            <CardContent className="p-3 text-center">
+              <div className="text-2xl font-display font-bold text-primary">26%</div>
+              <div className="text-xs text-muted-foreground mt-1">Discount</div>
+            </CardContent>
+          </Card>
+          <Card className="border-solar-blue/30 bg-solar-blue/5">
+            <CardContent className="p-3 text-center">
+              <div className="text-2xl font-display font-bold text-solar-blue">₹6.29</div>
+              <div className="text-xs text-muted-foreground mt-1">PPA Rate</div>
+            </CardContent>
+          </Card>
+          <Card className="border-solar-orange/30 bg-solar-orange/5">
+            <CardContent className="p-3 text-center">
+              <div className="text-2xl font-display font-bold text-solar-orange">₹50Cr+</div>
+              <div className="text-xs text-muted-foreground mt-1">Savings</div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
           {/* Chart */}
           <div className="lg:col-span-2">
             <Card className="border-border bg-card h-full">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-foreground">
-                  <TrendingDown className="w-5 h-5 text-primary" />
+              <CardHeader className="p-4 md:p-6">
+                <CardTitle className="flex items-center gap-2 text-foreground text-base md:text-lg">
+                  <TrendingDown className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                   25-Year Savings Projection (₹/Unit)
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="h-80">
+              <CardContent className="p-4 md:p-6 pt-0">
+                <div className="h-60 md:h-80">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={savingsData}>
                       <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
                       <XAxis 
                         dataKey="year" 
-                        tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}
+                        tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 10 }}
                       />
                       <YAxis 
-                        tick={{ fill: 'hsl(var(--muted-foreground))' }}
-                        label={{ 
-                          value: '₹/kWh', 
-                          angle: -90, 
-                          position: 'insideLeft',
-                          fill: 'hsl(var(--muted-foreground))'
-                        }}
+                        tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 10 }}
+                        width={35}
                       />
                       <Tooltip 
                         contentStyle={{
@@ -71,7 +88,7 @@ const Slide13PPACommercial = () => {
                           return [`₹${value.toFixed(2)}`, labels[name] || name];
                         }}
                       />
-                      <Legend />
+                      <Legend wrapperStyle={{ fontSize: '12px' }} />
                       <Bar dataKey="gridCost" name="Grid Tariff" fill="hsl(var(--muted-foreground))" radius={[4, 4, 0, 0]} />
                       <Bar dataKey="ppaCost" name="PPA Tariff" fill="hsl(142, 71%, 35%)" radius={[4, 4, 0, 0]} />
                     </BarChart>
@@ -81,8 +98,8 @@ const Slide13PPACommercial = () => {
             </Card>
           </div>
 
-          {/* Key Metrics */}
-          <div className="space-y-4">
+          {/* Key Metrics - Desktop */}
+          <div className="hidden md:flex flex-col space-y-4">
             <Card className="border-primary/30 bg-primary/5">
               <CardContent className="p-6 text-center">
                 <Percent className="w-10 h-10 text-primary mx-auto mb-3" />
@@ -119,10 +136,9 @@ const Slide13PPACommercial = () => {
         </div>
 
         {/* Note */}
-        <div className="text-center p-4 bg-secondary rounded-xl text-sm text-muted-foreground">
+        <div className="text-center p-3 md:p-4 bg-secondary rounded-xl text-xs md:text-sm text-muted-foreground">
           <span className="font-semibold text-foreground">Note:</span> Projections assume 5% annual 
           grid tariff escalation. Actual savings may vary based on DISCOM tariff revisions.
-          PPA includes modest annual escalation (2-3%) to account for O&M cost increases.
         </div>
       </div>
     </div>
