@@ -7,7 +7,7 @@ interface Slide01CoverProps {
 
 const Slide01Cover = ({ onStart }: Slide01CoverProps) => {
   return (
-    <div className="min-h-[calc(100vh-7.5rem)] relative overflow-hidden">
+    <div className="min-h-[calc(100vh-7rem)] md:min-h-[calc(100vh-7.5rem)] relative overflow-hidden">
       {/* Background Image Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
@@ -19,16 +19,16 @@ const Slide01Cover = ({ onStart }: Slide01CoverProps) => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 py-20">
-        <div className="animate-fade-in space-y-8 max-w-4xl">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 md:px-6 py-12 md:py-20">
+        <div className="animate-fade-in space-y-6 md:space-y-8 max-w-4xl">
           {/* Logo Badge */}
-          <div className="inline-flex items-center gap-2 bg-card/20 backdrop-blur-sm border border-primary-foreground/20 rounded-full px-4 py-2 text-primary-foreground">
-            <Sun className="w-5 h-5" />
-            <span className="text-sm font-medium">Unite Solar Presents</span>
+          <div className="inline-flex items-center gap-2 bg-card/20 backdrop-blur-sm border border-primary-foreground/20 rounded-full px-3 md:px-4 py-1.5 md:py-2 text-primary-foreground">
+            <Sun className="w-4 h-4 md:w-5 md:h-5" />
+            <span className="text-xs md:text-sm font-medium">Unite Solar Presents</span>
           </div>
 
           {/* Main Title */}
-          <h1 className="text-5xl md:text-7xl font-display font-bold text-primary-foreground leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-bold text-primary-foreground leading-tight">
             20+ MW Captive
             <br />
             <span className="text-solar-orange">Solar Power Project</span>
@@ -36,10 +36,10 @@ const Slide01Cover = ({ onStart }: Slide01CoverProps) => {
 
           {/* Subtitle */}
           <div className="space-y-2">
-            <p className="text-xl md:text-2xl text-primary-foreground/90 font-medium">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary-foreground/90 font-medium">
               Feasibility Assessment & Commercial Models
             </p>
-            <p className="text-lg text-primary-foreground/80">
+            <p className="text-sm md:text-lg text-primary-foreground/80">
               For <span className="font-semibold">CCI – Thandur Plant</span>
             </p>
           </div>
@@ -48,14 +48,14 @@ const Slide01Cover = ({ onStart }: Slide01CoverProps) => {
           <Button
             size="lg"
             onClick={onStart}
-            className="mt-8 bg-solar-orange hover:bg-solar-orange/90 text-primary-foreground font-semibold px-8 py-6 text-lg gap-2"
+            className="mt-4 md:mt-8 bg-solar-orange hover:bg-solar-orange/90 text-primary-foreground font-semibold px-6 md:px-8 py-5 md:py-6 text-base md:text-lg gap-2"
           >
             Begin Presentation
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
           </Button>
 
           {/* Bottom Info */}
-          <div className="pt-8 flex items-center justify-center gap-8 text-primary-foreground/70 text-sm">
+          <div className="pt-4 md:pt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 text-primary-foreground/70 text-xs md:text-sm">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-solar-green" />
               Ground-Mounted Solar

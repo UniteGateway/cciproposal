@@ -24,15 +24,15 @@ const SlideLayout = ({
   return (
     <div className="min-h-screen flex flex-col bg-background">
       {/* Header */}
-      <header className="h-16 border-b border-border bg-card flex items-center justify-between px-6">
-        <div className="flex items-center gap-6">
-          <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <div className="w-10 h-10 solar-gradient rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">U</span>
-            </div>
-            <span className="font-display font-semibold text-lg text-foreground">Unite Solar</span>
-          </Link>
+      <header className="h-14 md:h-16 border-b border-border bg-card flex items-center justify-between px-4 md:px-6">
+        <div className="flex items-center gap-3 md:gap-6">
           <SlideMenu />
+          <Link to="/" className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity">
+            <div className="w-8 h-8 md:w-10 md:h-10 solar-gradient rounded-lg flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-sm md:text-lg">U</span>
+            </div>
+            <span className="font-display font-semibold text-base md:text-lg text-foreground hidden sm:block">Unite Solar</span>
+          </Link>
         </div>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <span className="font-medium text-foreground">{currentSlide}</span>
@@ -49,34 +49,34 @@ const SlideLayout = ({
       </main>
 
       {/* Footer */}
-      <footer className="h-14 border-t border-border bg-card">
-        <div className="h-full max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <div className="flex items-center gap-6 text-sm text-muted-foreground">
+      <footer className="border-t border-border bg-card">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-0 md:h-14 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs md:text-sm text-muted-foreground">
             <a 
               href="https://www.unitesolar.in" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 hover:text-primary transition-colors"
             >
-              <Globe className="w-4 h-4" />
-              www.unitesolar.in
+              <Globe className="w-3.5 h-3.5 md:w-4 md:h-4" />
+              <span className="hidden xs:inline">www.</span>unitesolar.in
             </a>
             <div className="flex items-center gap-1.5">
-              <User className="w-4 h-4" />
+              <User className="w-3.5 h-3.5 md:w-4 md:h-4" />
               Dr Ravi Varma
             </div>
             <a 
               href="tel:9667660773" 
               className="flex items-center gap-1.5 hover:text-primary transition-colors"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-3.5 h-3.5 md:w-4 md:h-4" />
               9667660773
             </a>
             <a 
               href="mailto:info@unitesolar.in" 
               className="flex items-center gap-1.5 hover:text-primary transition-colors"
             >
-              <Mail className="w-4 h-4" />
+              <Mail className="w-3.5 h-3.5 md:w-4 md:h-4" />
               info@unitesolar.in
             </a>
           </div>
@@ -84,29 +84,29 @@ const SlideLayout = ({
           {showNavigation && (
             <div className="flex items-center gap-2">
               {prevSlide ? (
-                <Button variant="outline" size="sm" asChild className="gap-1">
+                <Button variant="outline" size="sm" asChild className="gap-1 h-8 md:h-9 text-xs md:text-sm">
                   <Link to={prevSlide}>
-                    <ChevronLeft className="w-4 h-4" />
-                    Previous
+                    <ChevronLeft className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                    <span className="hidden sm:inline">Previous</span>
                   </Link>
                 </Button>
               ) : (
-                <Button variant="outline" size="sm" disabled className="gap-1">
-                  <ChevronLeft className="w-4 h-4" />
-                  Previous
+                <Button variant="outline" size="sm" disabled className="gap-1 h-8 md:h-9 text-xs md:text-sm">
+                  <ChevronLeft className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                  <span className="hidden sm:inline">Previous</span>
                 </Button>
               )}
               {nextSlide ? (
-                <Button size="sm" asChild className="gap-1 bg-primary hover:bg-primary/90">
+                <Button size="sm" asChild className="gap-1 h-8 md:h-9 text-xs md:text-sm bg-primary hover:bg-primary/90">
                   <Link to={nextSlide}>
-                    Next
-                    <ChevronRight className="w-4 h-4" />
+                    <span className="hidden sm:inline">Next</span>
+                    <ChevronRight className="w-3.5 h-3.5 md:w-4 md:h-4" />
                   </Link>
                 </Button>
               ) : (
-                <Button size="sm" disabled className="gap-1 bg-primary hover:bg-primary/90">
-                  Next
-                  <ChevronRight className="w-4 h-4" />
+                <Button size="sm" disabled className="gap-1 h-8 md:h-9 text-xs md:text-sm bg-primary hover:bg-primary/90">
+                  <span className="hidden sm:inline">Next</span>
+                  <ChevronRight className="w-3.5 h-3.5 md:w-4 md:h-4" />
                 </Button>
               )}
             </div>
