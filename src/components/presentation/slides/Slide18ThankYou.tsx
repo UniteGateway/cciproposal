@@ -1,5 +1,6 @@
-import { Sun, Globe, Phone, Mail, User, MapPin } from "lucide-react";
+import { Globe, Phone, Mail, User } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import uniteLogo from "@/assets/unite-logo.png";
 
 const Slide18ThankYou = () => {
   return (
@@ -18,9 +19,8 @@ const Slide18ThankYou = () => {
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 py-16">
         <div className="space-y-10 max-w-4xl">
           {/* Logo */}
-          <div className="inline-flex items-center gap-3 bg-card/20 backdrop-blur-sm border border-primary-foreground/20 rounded-full px-6 py-3">
-            <Sun className="w-8 h-8 text-solar-orange" />
-            <span className="text-2xl font-display font-bold text-primary-foreground">Unite Solar</span>
+          <div className="inline-flex items-center bg-card/20 backdrop-blur-sm border border-primary-foreground/20 rounded-xl px-6 py-3">
+            <img src={uniteLogo} alt="Unite Solar" className="h-10 md:h-14 w-auto" />
           </div>
 
           {/* Thank You */}

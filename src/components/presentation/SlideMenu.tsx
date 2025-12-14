@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
+import uniteLogo from "@/assets/unite-logo.png";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -133,11 +134,8 @@ const MobileMenu = () => {
       </SheetTrigger>
       <SheetContent side="left" className="w-[280px] p-0">
         <SheetHeader className="p-4 border-b border-border">
-          <SheetTitle className="flex items-center gap-2">
-            <div className="w-8 h-8 solar-gradient rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">U</span>
-            </div>
-            Unite Solar
+          <SheetTitle>
+            <img src={uniteLogo} alt="Unite Solar" className="h-8 w-auto" />
           </SheetTitle>
         </SheetHeader>
         <div className="py-4 overflow-y-auto max-h-[calc(100vh-80px)]">
