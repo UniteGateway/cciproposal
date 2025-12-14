@@ -1,7 +1,9 @@
 import SlideLayout from "@/components/presentation/SlideLayout";
-import { Sun, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import uniteLogo from "@/assets/unite-logo.png";
+import cciLogo from "@/assets/cci-logo.png";
 
 const SlidePage01 = () => {
   return (
@@ -20,10 +22,14 @@ const SlidePage01 = () => {
         {/* Content */}
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 py-20">
           <div className="animate-fade-in space-y-8 max-w-4xl">
-            {/* Logo Badge */}
-            <div className="inline-flex items-center gap-2 bg-card/20 backdrop-blur-sm border border-primary-foreground/20 rounded-full px-4 py-2 text-primary-foreground">
-              <Sun className="w-5 h-5" />
-              <span className="text-sm font-medium">Unite Solar Presents</span>
+            {/* Logos */}
+            <div className="flex items-center gap-4 md:gap-8">
+              <div className="bg-card/20 backdrop-blur-sm border border-primary-foreground/20 rounded-xl px-4 md:px-6 py-2 md:py-3">
+                <img src={uniteLogo} alt="Unite Solar" className="h-8 md:h-12 w-auto" />
+              </div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl px-3 md:px-4 py-2 md:py-3">
+                <img src={cciLogo} alt="CCI" className="h-10 md:h-14 w-auto" />
+              </div>
             </div>
 
             {/* Main Title */}

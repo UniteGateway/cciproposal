@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, Globe, Phone, Mail, User } from "lucide-reac
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import SlideMenu from "./SlideMenu";
+import uniteLogo from "@/assets/unite-logo.png";
 interface SlideLayoutProps {
   children: ReactNode;
   currentSlide: number;
@@ -27,11 +28,8 @@ const SlideLayout = ({
       <header className="h-14 md:h-16 border-b border-border bg-card flex items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-3 md:gap-6">
           <SlideMenu />
-          <Link to="/" className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 md:w-10 md:h-10 solar-gradient rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm md:text-lg">U</span>
-            </div>
-            <span className="font-display font-semibold text-base md:text-lg text-foreground hidden sm:block">Unite Solar</span>
+          <Link to="/" className="hover:opacity-80 transition-opacity">
+            <img src={uniteLogo} alt="Unite Solar" className="h-8 md:h-10 w-auto" />
           </Link>
         </div>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
