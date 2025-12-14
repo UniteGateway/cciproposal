@@ -27,10 +27,10 @@ const SlideLayout = ({
       {/* Header */}
       <header className="h-14 md:h-16 border-b border-border bg-card flex items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-3 md:gap-6">
-          <SlideMenu />
           <Link to="/" className="hover:opacity-80 transition-opacity">
             <img src={uniteLogo} alt="Unite Solar" className="h-8 md:h-10 w-auto" />
           </Link>
+          <SlideMenu />
         </div>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <span className="font-medium text-foreground">{currentSlide}</span>
