@@ -81,7 +81,7 @@ const DesktopMenu = () => {
       <NavigationMenuList className="gap-1">
         {menuGroups.map((group) => (
           <NavigationMenuItem key={group.title}>
-            <NavigationMenuTrigger className="h-9 px-3 text-sm bg-transparent hover:bg-primary/10 data-[state=open]:bg-primary/10">
+            <NavigationMenuTrigger className="h-9 px-3 text-sm bg-transparent hover:bg-solar-orange/20 hover:text-solar-orange data-[state=open]:bg-solar-orange/20 data-[state=open]:text-solar-orange">
               {group.title}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -93,8 +93,8 @@ const DesktopMenu = () => {
                         to={item.href}
                         className={cn(
                           "block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors",
-                          "hover:bg-primary/10 hover:text-primary focus:bg-primary/10 focus:text-primary",
-                          currentPath === item.href && "bg-primary/15 text-primary font-medium"
+                          "hover:bg-solar-orange/20 hover:text-solar-orange focus:bg-solar-orange/20 focus:text-solar-orange",
+                          currentPath === item.href && "bg-solar-orange/25 text-solar-orange font-medium"
                         )}
                       >
                         {item.title}
@@ -145,7 +145,7 @@ const MobileMenu = () => {
               open={openGroups.includes(group.title)}
               onOpenChange={() => toggleGroup(group.title)}
             >
-              <CollapsibleTrigger className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium hover:bg-primary/5 transition-colors">
+              <CollapsibleTrigger className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium hover:bg-solar-orange/20 hover:text-solar-orange transition-colors">
                 {group.title}
                 <ChevronDown
                   className={cn(
@@ -163,8 +163,8 @@ const MobileMenu = () => {
                       onClick={() => setOpen(false)}
                       className={cn(
                         "block px-4 py-2.5 text-sm rounded-md mx-2 transition-colors",
-                        "hover:bg-primary/10 hover:text-primary",
-                        currentPath === item.href && "bg-primary/15 text-primary font-medium"
+                        "hover:bg-solar-orange/20 hover:text-solar-orange",
+                        currentPath === item.href && "bg-solar-orange/25 text-solar-orange font-medium"
                       )}
                     >
                       {item.title}
