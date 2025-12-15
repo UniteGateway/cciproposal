@@ -43,6 +43,7 @@ import partners from "@/assets/menu/partners.jpg";
 import solarRooftop from "@/assets/menu/solar-rooftop.jpg";
 import solarFarm from "@/assets/menu/solar-farm.jpg";
 import installation from "@/assets/menu/installation.jpg";
+import solarInstallService from "@/assets/menu/solar-install-service.jpg";
 import benefits from "@/assets/menu/benefits.jpg";
 import strategy from "@/assets/menu/strategy.jpg";
 import roadAhead from "@/assets/menu/road-ahead.jpg";
@@ -95,7 +96,7 @@ const menuGroups = [
     title: "Products & Services",
     items: [
       { title: "Our Products", href: "/slide/17", thumbnail: solarRooftop },
-      { title: "Our Services", href: "/slide/18", thumbnail: installation },
+      { title: "Our Services", href: "/slide/18", thumbnail: solarInstallService },
     ],
   },
   {
@@ -123,11 +124,11 @@ const DesktopMenu = () => {
               {group.title}
             </NavigationMenuTrigger>
             <NavigationMenuContent className="!w-screen !max-w-none">
-              <div className="w-full bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-2xl">
+              <div className="w-full bg-solar-orange/90 backdrop-blur-xl border-b border-solar-orange/30 shadow-2xl">
                 <div className="container mx-auto px-6 py-6">
-                  <div className="flex items-center gap-2 mb-5 pb-3 border-b border-border/30">
-                    <span className="text-lg font-semibold text-solar-orange">{group.title}</span>
-                    <span className="text-sm text-muted-foreground">({group.items.length} slides)</span>
+                  <div className="flex items-center gap-2 mb-5 pb-3 border-b border-white/20">
+                    <span className="text-lg font-semibold text-white">{group.title}</span>
+                    <span className="text-sm text-white/70">({group.items.length} slides)</span>
                   </div>
                   <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
                     {group.items.map((item) => (
@@ -137,11 +138,11 @@ const DesktopMenu = () => {
                             to={item.href}
                             className={cn(
                               "group block select-none rounded-2xl overflow-hidden border-2 transition-all duration-300",
-                              "hover:border-solar-orange hover:shadow-xl hover:shadow-solar-orange/25 hover:scale-[1.03]",
-                              "focus:border-solar-orange focus:shadow-xl focus:shadow-solar-orange/25",
+                              "hover:border-white hover:shadow-xl hover:shadow-white/25 hover:scale-[1.03]",
+                              "focus:border-white focus:shadow-xl focus:shadow-white/25",
                               currentPath === item.href 
-                                ? "border-solar-orange shadow-xl shadow-solar-orange/30 ring-2 ring-solar-orange/20" 
-                                : "border-white/20 bg-white/5"
+                                ? "border-white shadow-xl shadow-white/30 ring-2 ring-white/30" 
+                                : "border-white/30 bg-white/10"
                             )}
                           >
                             <div className="aspect-[16/10] relative overflow-hidden bg-muted">
