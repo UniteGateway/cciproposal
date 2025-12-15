@@ -26,73 +26,85 @@ import {
 import { cn } from "@/lib/utils";
 
 // Import thumbnail images
-import cciLogo from "@/assets/cci-logo.png";
-import cciFactory from "@/assets/cci-factory.png";
-import cciPlant from "@/assets/cci-plant.png";
-import cciPlant2 from "@/assets/cci-plant2.png";
-import cciIndustry from "@/assets/cci-industry.png";
-import solarFlower from "@/assets/solar-flower.png";
-import installations from "@/assets/installations.png";
-import services from "@/assets/services.png";
-import partnerLogos from "@/assets/partner-logos.png";
-import brandsGrid from "@/assets/brands-grid.png";
+import solarPanels from "@/assets/menu/solar-panels.jpg";
+import companyTeam from "@/assets/menu/company-team.jpg";
+import siteAssessment from "@/assets/menu/site-assessment.jpg";
+import landField from "@/assets/menu/land-field.jpg";
+import powerGrid from "@/assets/menu/power-grid.jpg";
+import powerMeter from "@/assets/menu/power-meter.jpg";
+import transmission from "@/assets/menu/transmission.jpg";
+import businessContract from "@/assets/menu/business-contract.jpg";
+import analytics from "@/assets/menu/analytics.jpg";
+import handshake from "@/assets/menu/handshake.jpg";
+import maintenance from "@/assets/menu/maintenance.jpg";
+import agreement from "@/assets/menu/agreement.jpg";
+import pricing from "@/assets/menu/pricing.jpg";
+import partners from "@/assets/menu/partners.jpg";
+import solarRooftop from "@/assets/menu/solar-rooftop.jpg";
+import solarFarm from "@/assets/menu/solar-farm.jpg";
+import installation from "@/assets/menu/installation.jpg";
+import benefits from "@/assets/menu/benefits.jpg";
+import strategy from "@/assets/menu/strategy.jpg";
+import roadAhead from "@/assets/menu/road-ahead.jpg";
+import thankYou from "@/assets/menu/thank-you.jpg";
+import brands from "@/assets/menu/brands.jpg";
 
 const menuGroups = [
   {
     title: "Introduction",
     items: [
-      { title: "Cover", href: "/slide/1", thumbnail: cciLogo },
-      { title: "About Unite Solar", href: "/slide/2", thumbnail: uniteLogo },
+      { title: "Cover", href: "/slide/1", thumbnail: solarPanels },
+      { title: "About Unite Solar", href: "/slide/2", thumbnail: companyTeam },
     ],
   },
   {
     title: "Feasibility",
     items: [
-      { title: "Site Visit Assessment", href: "/slide/3", thumbnail: cciFactory },
-      { title: "Land Availability", href: "/slide/4", thumbnail: cciPlant },
-      { title: "Power Infrastructure", href: "/slide/5", thumbnail: cciIndustry },
-      { title: "CMD Enhancement", href: "/slide/6", thumbnail: cciPlant2 },
-      { title: "Power Evacuation", href: "/slide/7", thumbnail: solarFlower },
+      { title: "Site Visit Assessment", href: "/slide/3", thumbnail: siteAssessment },
+      { title: "Land Availability", href: "/slide/4", thumbnail: landField },
+      { title: "Power Infrastructure", href: "/slide/5", thumbnail: powerGrid },
+      { title: "CMD Enhancement", href: "/slide/6", thumbnail: powerMeter },
+      { title: "Power Evacuation", href: "/slide/7", thumbnail: transmission },
     ],
   },
   {
     title: "BOOT Model",
     items: [
-      { title: "Project Structuring", href: "/slide/8", thumbnail: cciFactory },
-      { title: "BOOT Overview", href: "/slide/9", thumbnail: installations },
-      { title: "BOOT Scope", href: "/slide/10", thumbnail: cciPlant },
-      { title: "Post-Transfer O&M", href: "/slide/11", thumbnail: services },
+      { title: "Project Structuring", href: "/slide/8", thumbnail: businessContract },
+      { title: "BOOT Overview", href: "/slide/9", thumbnail: analytics },
+      { title: "BOOT Scope", href: "/slide/10", thumbnail: handshake },
+      { title: "Post-Transfer O&M", href: "/slide/11", thumbnail: maintenance },
     ],
   },
   {
     title: "PPA Model",
     items: [
-      { title: "PPA Overview", href: "/slide/12", thumbnail: cciIndustry },
-      { title: "Commercial Terms", href: "/slide/13", thumbnail: cciFactory },
-      { title: "PPA Scope", href: "/slide/14", thumbnail: installations },
+      { title: "PPA Overview", href: "/slide/12", thumbnail: agreement },
+      { title: "Commercial Terms", href: "/slide/13", thumbnail: pricing },
+      { title: "PPA Scope", href: "/slide/14", thumbnail: solarFarm },
     ],
   },
   {
     title: "Partners",
     items: [
-      { title: "Strategic Partners", href: "/slide/15", thumbnail: partnerLogos },
-      { title: "Brands We Use", href: "/slide/16", thumbnail: brandsGrid },
+      { title: "Strategic Partners", href: "/slide/15", thumbnail: partners },
+      { title: "Brands We Use", href: "/slide/16", thumbnail: brands },
     ],
   },
   {
     title: "Products & Services",
     items: [
-      { title: "Our Products", href: "/slide/17", thumbnail: solarFlower },
-      { title: "Our Services", href: "/slide/18", thumbnail: services },
+      { title: "Our Products", href: "/slide/17", thumbnail: solarRooftop },
+      { title: "Our Services", href: "/slide/18", thumbnail: installation },
     ],
   },
   {
     title: "Conclusion",
     items: [
-      { title: "Key Benefits", href: "/slide/19", thumbnail: cciPlant2 },
-      { title: "Strategic Advantages", href: "/slide/20", thumbnail: cciIndustry },
-      { title: "Way Forward", href: "/slide/21", thumbnail: installations },
-      { title: "Thank You", href: "/slide/22", thumbnail: uniteLogo },
+      { title: "Key Benefits", href: "/slide/19", thumbnail: benefits },
+      { title: "Strategic Advantages", href: "/slide/20", thumbnail: strategy },
+      { title: "Way Forward", href: "/slide/21", thumbnail: roadAhead },
+      { title: "Thank You", href: "/slide/22", thumbnail: thankYou },
     ],
   },
 ];
@@ -111,42 +123,42 @@ const DesktopMenu = () => {
               {group.title}
             </NavigationMenuTrigger>
             <NavigationMenuContent className="!w-screen !max-w-none">
-              <div className="w-full bg-card/95 backdrop-blur-md border-b border-border shadow-xl">
+              <div className="w-full bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-2xl">
                 <div className="container mx-auto px-6 py-6">
-                  <div className="flex items-center gap-2 mb-4 pb-3 border-b border-border/50">
+                  <div className="flex items-center gap-2 mb-5 pb-3 border-b border-border/30">
                     <span className="text-lg font-semibold text-solar-orange">{group.title}</span>
                     <span className="text-sm text-muted-foreground">({group.items.length} slides)</span>
                   </div>
-                  <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                  <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
                     {group.items.map((item) => (
                       <li key={item.href}>
                         <NavigationMenuLink asChild>
                           <Link
                             to={item.href}
                             className={cn(
-                              "group block select-none rounded-xl overflow-hidden border-2 transition-all duration-300",
-                              "hover:border-solar-orange hover:shadow-lg hover:shadow-solar-orange/20 hover:scale-[1.02]",
-                              "focus:border-solar-orange focus:shadow-lg focus:shadow-solar-orange/20",
+                              "group block select-none rounded-2xl overflow-hidden border-2 transition-all duration-300",
+                              "hover:border-solar-orange hover:shadow-xl hover:shadow-solar-orange/25 hover:scale-[1.03]",
+                              "focus:border-solar-orange focus:shadow-xl focus:shadow-solar-orange/25",
                               currentPath === item.href 
-                                ? "border-solar-orange shadow-lg shadow-solar-orange/30" 
-                                : "border-border/50 bg-background/50"
+                                ? "border-solar-orange shadow-xl shadow-solar-orange/30 ring-2 ring-solar-orange/20" 
+                                : "border-white/20 bg-white/5"
                             )}
                           >
-                            <div className="aspect-video relative overflow-hidden bg-muted">
+                            <div className="aspect-[16/10] relative overflow-hidden bg-muted">
                               <img
                                 src={item.thumbnail}
                                 alt={item.title}
-                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                               />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                            </div>
-                            <div className={cn(
-                              "px-3 py-2.5 text-sm font-medium text-center transition-colors",
-                              currentPath === item.href 
-                                ? "bg-solar-orange/20 text-solar-orange" 
-                                : "bg-background/80 text-foreground group-hover:text-solar-orange"
-                            )}>
-                              {item.title}
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                              <div className="absolute bottom-0 left-0 right-0 p-3">
+                                <span className={cn(
+                                  "text-sm font-medium text-white drop-shadow-lg",
+                                  currentPath === item.href && "text-solar-orange"
+                                )}>
+                                  {item.title}
+                                </span>
+                              </div>
                             </div>
                           </Link>
                         </NavigationMenuLink>
@@ -184,8 +196,8 @@ const MobileMenu = () => {
           <span className="sr-only">Open menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-[320px] p-0">
-        <SheetHeader className="p-4 border-b border-border">
+      <SheetContent side="left" className="w-[320px] p-0 bg-background/95 backdrop-blur-xl">
+        <SheetHeader className="p-4 border-b border-border/50">
           <SheetTitle>
             <img src={uniteLogo} alt="Unite Solar" className="h-8 w-auto" />
           </SheetTitle>
@@ -207,35 +219,35 @@ const MobileMenu = () => {
                 />
               </CollapsibleTrigger>
               <CollapsibleContent>
-                <div className="px-3 pb-3 grid grid-cols-2 gap-2">
+                <div className="px-3 pb-3 grid grid-cols-2 gap-3">
                   {group.items.map((item) => (
                     <Link
                       key={item.href}
                       to={item.href}
                       onClick={() => setOpen(false)}
                       className={cn(
-                        "block rounded-lg overflow-hidden border transition-all",
-                        "hover:border-solar-orange hover:shadow-md",
+                        "block rounded-xl overflow-hidden border-2 transition-all",
+                        "hover:border-solar-orange hover:shadow-lg",
                         currentPath === item.href 
-                          ? "border-solar-orange shadow-md" 
-                          : "border-border/50"
+                          ? "border-solar-orange shadow-lg" 
+                          : "border-white/20"
                       )}
                     >
-                      <div className="aspect-video relative overflow-hidden bg-muted">
+                      <div className="aspect-[16/10] relative overflow-hidden bg-muted">
                         <img
                           src={item.thumbnail}
                           alt={item.title}
                           className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                      </div>
-                      <div className={cn(
-                        "px-2 py-1.5 text-xs font-medium text-center truncate",
-                        currentPath === item.href 
-                          ? "bg-solar-orange/20 text-solar-orange" 
-                          : "bg-background text-foreground"
-                      )}>
-                        {item.title}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 p-2">
+                          <span className={cn(
+                            "text-xs font-medium text-white drop-shadow-lg line-clamp-1",
+                            currentPath === item.href && "text-solar-orange"
+                          )}>
+                            {item.title}
+                          </span>
+                        </div>
                       </div>
                     </Link>
                   ))}
