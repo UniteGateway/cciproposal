@@ -106,7 +106,7 @@ const DesktopMenu = () => {
                       <Link
                         to={item.href}
                         className={cn(
-                          "block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors",
+                          "block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors text-foreground",
                           "hover:bg-solar-orange/20 hover:text-solar-orange focus:bg-solar-orange/20 focus:text-solar-orange",
                           currentPath === item.href && "bg-solar-orange/25 text-solar-orange font-medium"
                         )}
