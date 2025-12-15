@@ -12,7 +12,7 @@ const keyTerms = [
   { icon: DollarSign, label: "Investment", value: "100% by Unite Solar" },
   { icon: Calendar, label: "Contract Period", value: "6 Years" },
   { icon: Key, label: "Ownership Transfer", value: "End of Year 6" },
-  { icon: Clock, label: "Commissioning", value: "12-18 Months" },
+  { icon: Clock, label: "Commissioning", value: "Within 12 Months" },
 ];
 
 const Slide09BOOTOverview = () => {
@@ -91,7 +91,7 @@ const Slide09BOOTOverview = () => {
           </Card>
           <Card className="border-solar-orange/30 bg-solar-orange/5">
             <CardContent className="p-6 text-center">
-              <div className="text-3xl font-display font-bold text-solar-orange">25+ Years</div>
+              <div className="text-3xl font-display font-bold text-solar-orange">30+ Years</div>
               <div className="text-foreground font-medium mt-1">Plant Life</div>
               <div className="text-sm text-muted-foreground mt-2">Long-term value creation</div>
             </CardContent>

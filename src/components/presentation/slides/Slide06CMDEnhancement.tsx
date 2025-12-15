@@ -4,8 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const comparisonData = [
   { name: "Present CMD", value: 19.5, fill: "hsl(210, 100%, 40%)" },
-  { name: "Solar Addition", value: 6.6, fill: "hsl(24, 95%, 53%)" },
-  { name: "Required CMD", value: 26.1, fill: "hsl(142, 71%, 35%)" },
+  { name: "Additional CMD Required", value: 6, fill: "hsl(24, 95%, 53%)" },
+  { name: "Solar Plant Capacity", value: 20, fill: "hsl(142, 71%, 35%)" },
 ];
 
 const benefits = [
@@ -87,12 +87,12 @@ const Slide06CMDEnhancement = () => {
                     <div className="text-xs md:text-sm text-muted-foreground mt-1">Present CMD</div>
                   </div>
                   <div className="p-3 md:p-4 bg-solar-orange/10 rounded-lg">
-                    <div className="text-xl md:text-3xl font-bold text-solar-orange">+6.6 KVA</div>
-                    <div className="text-xs md:text-sm text-muted-foreground mt-1">Solar Plant</div>
+                    <div className="text-xl md:text-3xl font-bold text-solar-orange">+6 MVA</div>
+                    <div className="text-xs md:text-sm text-muted-foreground mt-1">Additional CMD</div>
                   </div>
                   <div className="p-3 md:p-4 bg-primary/10 rounded-lg">
-                    <div className="text-xl md:text-3xl font-bold text-primary">26.1 MVA</div>
-                    <div className="text-xs md:text-sm text-muted-foreground mt-1">Required</div>
+                    <div className="text-xl md:text-3xl font-bold text-primary">20 MW</div>
+                    <div className="text-xs md:text-sm text-muted-foreground mt-1">Solar Plant</div>
                   </div>
                 </div>
               </CardContent>

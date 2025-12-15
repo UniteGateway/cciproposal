@@ -1,10 +1,10 @@
 import SlideLayout from "@/components/presentation/SlideLayout";
-import Slide15Benefits from "@/components/presentation/slides/Slide15Benefits";
+import SlidePartners from "@/components/presentation/slides/SlidePartners";
 
 const SlidePage15 = () => {
   return (
-    <SlideLayout currentSlide={15} totalSlides={20}>
-      <Slide15Benefits />
+    <SlideLayout currentSlide={15} totalSlides={22}>
+      <SlidePartners />
     </SlideLayout>
   );
 };

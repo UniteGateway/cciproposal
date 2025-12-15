@@ -1,12 +1,12 @@
 import { MapPin, Maximize2, Sun, Zap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import solarFlower from "@/assets/solar-flower.png";
+import cciIndustry from "@/assets/cci-industry.png";
 
 const landDetails = [
   {
     icon: Maximize2,
     label: "Total Land Available",
-    value: "50+ Acres",
+    value: "400+ Acres",
     description: "Contiguous land parcel suitable for solar installation",
   },
   {
@@ -47,7 +47,7 @@ const Slide04LandAvailability = () => {
             <div 
               className="h-56 md:h-80 rounded-xl md:rounded-2xl bg-cover bg-center"
               style={{
-                backgroundImage: `url(${solarFlower})`,
+                backgroundImage: `url(${cciIndustry})`,
               }}
             />
             <div className="absolute -bottom-3 -right-2 md:-bottom-4 md:-right-4 bg-card border border-border rounded-lg md:rounded-xl p-3 md:p-4 shadow-lg">
