@@ -3,8 +3,8 @@ import {
   Factory, Home, Wrench, ClipboardCheck 
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import servicesImg from "@/assets/services.png";
-import installationsImg from "@/assets/installations.png";
+import cciFactory from "@/assets/cci-factory.png";
+import solarFlower from "@/assets/solar-flower.png";
 
 const services = [
   { 
@@ -69,15 +69,15 @@ const SlideServices = () => {
         {/* Image Gallery */}
         <div className="grid md:grid-cols-2 gap-4">
           <div className="relative rounded-xl overflow-hidden h-40 md:h-52">
-            <img src={servicesImg} alt="Our Services" className="w-full h-full object-cover" />
+            <img src={cciFactory} alt="CCI Factory" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-4">
               <span className="text-foreground font-semibold">Industrial Solar Solutions</span>
             </div>
           </div>
           <div className="relative rounded-xl overflow-hidden h-40 md:h-52">
-            <img src={installationsImg} alt="Installations" className="w-full h-full object-cover" />
+            <img src={solarFlower} alt="Solar Innovation" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-4">
-              <span className="text-foreground font-semibold">Successful Installations</span>
+              <span className="text-foreground font-semibold">Innovative Solar Technology</span>
             </div>
           </div>
         </div>
