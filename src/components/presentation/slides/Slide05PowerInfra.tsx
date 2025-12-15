@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const cmdData = [
   { name: "Current Utilization", value: 19.5, color: "hsl(142, 71%, 35%)" },
-  { name: "Solar Plant Generation", value: 6.6, color: "hsl(24, 95%, 53%)" },
+  { name: "Additional CMD Required", value: 6, color: "hsl(24, 95%, 53%)" },
 ];
 
 const Slide05PowerInfra = () => {
@@ -30,7 +30,7 @@ const Slide05PowerInfra = () => {
             <CardHeader className="p-4 md:p-6">
               <CardTitle className="flex items-center gap-2 text-foreground text-base md:text-lg">
                 <Zap className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-                CMD Allocation (19.5 MVA + 6.6 KVA Solar)
+                CMD Allocation (19.5 MVA + 6 MVA Additional)
               </CardTitle>
             </CardHeader>
             <CardContent className="p-4 md:p-6 pt-0">
@@ -77,12 +77,16 @@ const Slide05PowerInfra = () => {
                     <span className="text-xl md:text-2xl font-bold text-foreground">19.5 MVA</span>
                   </div>
                   <div className="flex items-center justify-between p-3 md:p-4 bg-solar-orange/10 rounded-lg">
-                    <span className="text-xs md:text-sm text-muted-foreground">Solar Plant Generation</span>
-                    <span className="text-xl md:text-2xl font-bold text-solar-orange">6.6 KVA</span>
+                    <span className="text-xs md:text-sm text-muted-foreground">Additional CMD Required</span>
+                    <span className="text-xl md:text-2xl font-bold text-solar-orange">6 MVA</span>
                   </div>
                   <div className="flex items-center justify-between p-3 md:p-4 bg-primary/10 rounded-lg">
                     <span className="text-xs md:text-sm text-muted-foreground">Total Capacity</span>
-                    <span className="text-xl md:text-2xl font-bold text-primary">26.1 MVA</span>
+                    <span className="text-xl md:text-2xl font-bold text-primary">25.5 MVA</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 md:p-4 bg-solar-blue/10 rounded-lg">
+                    <span className="text-xs md:text-sm text-muted-foreground">Power Termination Point</span>
+                    <span className="text-xl md:text-2xl font-bold text-solar-blue">132/6.6 KVA Substation</span>
                   </div>
                 </div>
               </CardContent>

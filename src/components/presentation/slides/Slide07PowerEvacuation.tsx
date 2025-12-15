@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const advantages = [
   {
     icon: Building2,
-    title: "Existing 133 KVA Substation",
+    title: "Existing 132/6.6 KVA Substation",
     description: "Ready infrastructure for power evacuation with minimal upgrades required",
   },
   {
@@ -22,7 +22,7 @@ const advantages = [
 const evacuationSteps = [
   "Solar plant generation at 11 KV",
   "Step-up to 33 KV at plant substation",
-  "Interconnection with 133 KVA substation",
+  "Interconnection with 132/6.6 KVA substation",
   "Power injection into CCI grid",
   "Real-time monitoring & metering",
 ];
@@ -102,7 +102,7 @@ const Slide07PowerEvacuation = () => {
               <div>
                 <h4 className="font-semibold text-foreground text-base md:text-lg">Key Advantage</h4>
                 <p className="text-sm text-muted-foreground">
-                  The existing 133 KVA substation reduces infrastructure investment and enables faster commissioning.
+                  The existing 132/6.6 KVA substation reduces infrastructure investment and enables faster commissioning.
                 </p>
               </div>
             </div>

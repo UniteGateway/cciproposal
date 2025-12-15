@@ -61,26 +61,26 @@ const menuGroups = [
     ],
   },
   {
-    title: "Conclusion",
-    items: [
-      { title: "Key Benefits", href: "/slide/15" },
-      { title: "Strategic Advantages", href: "/slide/16" },
-      { title: "Way Forward", href: "/slide/17" },
-      { title: "Thank You", href: "/slide/18" },
-    ],
-  },
-  {
     title: "Partners",
     items: [
-      { title: "Strategic Partners", href: "/slide/19" },
-      { title: "Brands We Use", href: "/slide/20" },
+      { title: "Strategic Partners", href: "/slide/15" },
+      { title: "Brands We Use", href: "/slide/16" },
     ],
   },
   {
     title: "Products & Services",
     items: [
-      { title: "Our Products", href: "/slide/21" },
-      { title: "Our Services", href: "/slide/22" },
+      { title: "Our Products", href: "/slide/17" },
+      { title: "Our Services", href: "/slide/18" },
+    ],
+  },
+  {
+    title: "Conclusion",
+    items: [
+      { title: "Key Benefits", href: "/slide/19" },
+      { title: "Strategic Advantages", href: "/slide/20" },
+      { title: "Way Forward", href: "/slide/21" },
+      { title: "Thank You", href: "/slide/22" },
     ],
   },
 ];
