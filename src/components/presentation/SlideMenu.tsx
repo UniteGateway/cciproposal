@@ -94,11 +94,11 @@ const DesktopMenu = () => {
     <NavigationMenu className="hidden lg:flex">
       <NavigationMenuList className="gap-1">
         {menuGroups.map((group) => (
-          <NavigationMenuItem key={group.title}>
+          <NavigationMenuItem key={group.title} className="relative">
             <NavigationMenuTrigger className="h-9 px-3 text-sm bg-transparent hover:bg-solar-orange/20 hover:text-solar-orange data-[state=open]:bg-solar-orange/20 data-[state=open]:text-solar-orange">
               {group.title}
             </NavigationMenuTrigger>
-            <NavigationMenuContent>
+            <NavigationMenuContent className="absolute left-0 top-full">
               <ul className="grid w-[220px] gap-1 p-2 bg-card border border-border shadow-lg rounded-md">
                 {group.items.map((item) => (
                   <li key={item.href}>
