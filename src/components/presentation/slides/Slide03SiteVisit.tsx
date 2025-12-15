@@ -1,5 +1,6 @@
 import { CheckCircle2, MapPin, Calendar, FileCheck, Target } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import cciFactory from "@/assets/cci-factory.png";
 
 const findings = [
   {
@@ -51,7 +52,7 @@ const Slide03SiteVisit = () => {
             <div 
               className="h-48 md:h-64 rounded-xl md:rounded-2xl bg-cover bg-center relative overflow-hidden"
               style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=800&q=80')`,
+                backgroundImage: `url(${cciFactory})`,
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />

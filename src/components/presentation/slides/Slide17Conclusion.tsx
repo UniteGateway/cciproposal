@@ -1,6 +1,7 @@
 import { CheckCircle2, ArrowRight, Phone, Mail } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import cciFactory from "@/assets/cci-factory.png";
 
 const keyTakeaways = [
   "20+ MW captive solar project with proven feasibility",
@@ -20,8 +21,13 @@ const nextSteps = [
 
 const Slide17Conclusion = () => {
   return (
-    <div className="min-h-[calc(100vh-7.5rem)] px-6 py-12">
-      <div className="max-w-6xl mx-auto space-y-10">
+    <div className="min-h-[calc(100vh-7.5rem)] px-6 py-12 relative">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-10"
+        style={{ backgroundImage: `url(${cciFactory})` }}
+      />
+      <div className="max-w-6xl mx-auto space-y-10 relative z-10">
         {/* Header */}
         <div className="text-center space-y-4">
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">
