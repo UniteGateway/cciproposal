@@ -1,17 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
-import waareeLogo from "@/assets/brands/waaree.svg";
 
 const brands = [
-  { name: "Vikram Solar", category: "Modules", color: "bg-gradient-to-br from-orange-500 to-orange-600", logo: null },
-  { name: "Adani", category: "Modules", color: "bg-gradient-to-br from-blue-600 to-blue-700", logo: null },
-  { name: "Tata Power Solar", category: "Modules", color: "bg-gradient-to-br from-blue-800 to-indigo-900", logo: null },
-  { name: "Goldi Solar", category: "Modules", color: "bg-gradient-to-br from-yellow-500 to-amber-600", logo: null },
-  { name: "Waaree", category: "Modules", color: "bg-white", logo: waareeLogo },
-  { name: "Sunplus", category: "Modules", color: "bg-gradient-to-br from-green-500 to-green-600", logo: null },
-  { name: "Sungrow", category: "Inverters", color: "bg-gradient-to-br from-orange-400 to-red-500", logo: null },
-  { name: "Polycab", category: "Cables", color: "bg-gradient-to-br from-red-600 to-red-700", logo: null },
-  { name: "Renewsys", category: "Modules", color: "bg-gradient-to-br from-green-600 to-teal-600", logo: null },
-  { name: "Siemens", category: "Equipment", color: "bg-gradient-to-br from-teal-500 to-cyan-600", logo: null },
+  { name: "Vikram Solar", category: "Modules", logo: "https://www.vikramsolar.com/wp-content/uploads/2023/03/vikram-solar-logo.png" },
+  { name: "Adani", category: "Modules", logo: "https://www.adanisolar.com/sites/default/files/logo.png" },
+  { name: "Tata Power Solar", category: "Modules", logo: "https://upload.wikimedia.org/wikipedia/commons/3/35/Tata_Power_Solar_logo.png" },
+  { name: "Goldi Solar", category: "Modules", logo: "https://www.goldisolar.com/wp-content/uploads/2023/01/goldi-solar-logo.png" },
+  { name: "Waaree", category: "Modules", logo: "https://www.waaree.com/assets/images/logos/waaree-logo.png" },
+  { name: "Sunplus", category: "Modules", logo: null },
+  { name: "Sungrow", category: "Inverters", logo: "https://en.sungrowpower.com/image/logo.png" },
+  { name: "Polycab", category: "Cables", logo: "https://www.polycab.com/wp-content/uploads/2020/10/polycab-logo.png" },
+  { name: "Renewsys", category: "Modules", logo: "https://www.renewsysindia.com/images/logo.png" },
+  { name: "Siemens", category: "Equipment", logo: "https://upload.wikimedia.org/wikipedia/commons/5/55/Siemens-logo.svg" },
 ];
 
 const SlideBrands = () => {
@@ -40,16 +39,19 @@ const SlideBrands = () => {
               style={{ animationDelay: `${index * 50}ms` }}
             >
               <CardContent className="p-4 md:p-6 text-center space-y-3">
-                <div className={`w-16 h-16 mx-auto rounded-2xl ${brand.color} flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg ${brand.logo ? 'p-2' : ''}`}>
+                <div className="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg p-2">
                   {brand.logo ? (
                     <img 
                       src={brand.logo} 
                       alt={`${brand.name} logo`}
                       className="w-full h-full object-contain"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                      }}
                     />
-                  ) : (
-                    <span className="text-white font-bold text-xl drop-shadow-md">{brand.name.charAt(0)}</span>
-                  )}
+                  ) : null}
+                  <span className={`text-primary font-bold text-xl ${brand.logo ? 'hidden' : ''}`}>{brand.name.charAt(0)}</span>
                 </div>
                 <div>
                   <h3 className="font-bold text-foreground text-sm md:text-base">{brand.name}</h3>
