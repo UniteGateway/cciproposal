@@ -7,12 +7,13 @@ const models = [
     name: "BOOT Model",
     fullName: "Build-Own-Operate-Transfer",
     duration: "6 Years",
+    savings: "30 Years",
     investment: "100% by Unite Solar",
     highlights: [
       "Zero upfront investment for CCI",
       "Ownership transfer after 6 years",
       "Complete O&M during contract",
-      "Fixed cost structure",
+      "Total savings calculated over 30 years",
     ],
     color: "primary",
   },
@@ -20,10 +21,11 @@ const models = [
     icon: FileText,
     name: "PPA Model",
     fullName: "Power Purchase Agreement",
-    duration: "25 Years",
+    duration: "30 Years",
+    savings: "₹450+ Cr",
     investment: "100% by Unite Solar",
     highlights: [
-      "26% discount on grid tariff",
+      "₹5/unit fixed PPA rate",
       "Long-term price stability",
       "Unite Solar owns & operates",
       "Zero maintenance burden",
@@ -65,18 +67,24 @@ const Slide08ProjectStructuring = () => {
               </CardHeader>
               <CardContent className="p-4 md:p-6 pt-0 space-y-4 md:space-y-6">
                 {/* Key Metrics */}
-                <div className="grid grid-cols-2 gap-2 md:gap-4">
-                  <div className="p-3 md:p-4 bg-secondary rounded-lg text-center">
-                    <div className={`text-lg md:text-2xl font-bold ${index === 0 ? 'text-primary' : 'text-solar-blue'}`}>
+                <div className="grid grid-cols-3 gap-2 md:gap-3">
+                  <div className="p-2 md:p-4 bg-secondary rounded-lg text-center">
+                    <div className={`text-base md:text-xl font-bold ${index === 0 ? 'text-primary' : 'text-solar-blue'}`}>
                       {model.duration}
                     </div>
-                    <div className="text-xs md:text-sm text-muted-foreground">Contract Period</div>
+                    <div className="text-[10px] md:text-sm text-muted-foreground">Contract</div>
                   </div>
-                  <div className="p-3 md:p-4 bg-secondary rounded-lg text-center">
-                    <div className={`text-lg md:text-2xl font-bold ${index === 0 ? 'text-primary' : 'text-solar-blue'}`}>
+                  <div className="p-2 md:p-4 bg-secondary rounded-lg text-center">
+                    <div className={`text-base md:text-xl font-bold ${index === 0 ? 'text-primary' : 'text-solar-blue'}`}>
+                      {model.savings}
+                    </div>
+                    <div className="text-[10px] md:text-sm text-muted-foreground">Savings Period</div>
+                  </div>
+                  <div className="p-2 md:p-4 bg-secondary rounded-lg text-center">
+                    <div className={`text-base md:text-xl font-bold ${index === 0 ? 'text-primary' : 'text-solar-blue'}`}>
                       100%
                     </div>
-                    <div className="text-xs md:text-sm text-muted-foreground">Investment by Us</div>
+                    <div className="text-[10px] md:text-sm text-muted-foreground">Investment</div>
                   </div>
                 </div>
 
