@@ -3,7 +3,7 @@ import Slide10BOOTScope from "@/components/presentation/slides/Slide10BOOTScope"
 
 const SlidePage10 = () => {
   return (
-    <SlideLayout currentSlide={10} totalSlides={18}>
+    <SlideLayout currentSlide={10} totalSlides={20}>
       <Slide10BOOTScope />
     </SlideLayout>
   );

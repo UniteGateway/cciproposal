@@ -3,7 +3,7 @@ import Slide07PowerEvacuation from "@/components/presentation/slides/Slide07Powe
 
 const SlidePage07 = () => {
   return (
-    <SlideLayout currentSlide={7} totalSlides={18}>
+    <SlideLayout currentSlide={7} totalSlides={20}>
       <Slide07PowerEvacuation />
     </SlideLayout>
   );

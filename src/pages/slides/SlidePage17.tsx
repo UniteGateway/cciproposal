@@ -3,7 +3,7 @@ import Slide17Conclusion from "@/components/presentation/slides/Slide17Conclusio
 
 const SlidePage17 = () => {
   return (
-    <SlideLayout currentSlide={17} totalSlides={18}>
+    <SlideLayout currentSlide={17} totalSlides={20}>
       <Slide17Conclusion />
     </SlideLayout>
   );

@@ -3,7 +3,7 @@ import Slide15Benefits from "@/components/presentation/slides/Slide15Benefits";
 
 const SlidePage15 = () => {
   return (
-    <SlideLayout currentSlide={15} totalSlides={18}>
+    <SlideLayout currentSlide={15} totalSlides={20}>
       <Slide15Benefits />
     </SlideLayout>
   );

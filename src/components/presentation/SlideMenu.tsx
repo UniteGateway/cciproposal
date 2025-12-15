@@ -69,6 +69,13 @@ const menuGroups = [
       { title: "Thank You", href: "/slide/18" },
     ],
   },
+  {
+    title: "Partners",
+    items: [
+      { title: "Strategic Partners", href: "/slide/19" },
+      { title: "Brands We Use", href: "/slide/20" },
+    ],
+  },
 ];
 
 // Desktop Menu

@@ -3,8 +3,8 @@ import { Zap, AlertTriangle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const cmdData = [
-  { name: "Current Utilization", value: 15, color: "hsl(142, 71%, 35%)" },
-  { name: "Available Capacity", value: 4, color: "hsl(210, 100%, 40%)" },
+  { name: "Current Utilization", value: 19.5, color: "hsl(142, 71%, 35%)" },
+  { name: "Solar Plant Generation", value: 6.6, color: "hsl(24, 95%, 53%)" },
 ];
 
 const Slide05PowerInfra = () => {
@@ -30,7 +30,7 @@ const Slide05PowerInfra = () => {
             <CardHeader className="p-4 md:p-6">
               <CardTitle className="flex items-center gap-2 text-foreground text-base md:text-lg">
                 <Zap className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-                CMD Allocation (19 MW Total)
+                CMD Allocation (19.5 MVA + 6.6 KVA Solar)
               </CardTitle>
             </CardHeader>
             <CardContent className="p-4 md:p-6 pt-0">
@@ -45,7 +45,7 @@ const Slide05PowerInfra = () => {
                       outerRadius={70}
                       paddingAngle={5}
                       dataKey="value"
-                      label={({ name, value }) => `${value} MW`}
+                      label={({ name, value }) => `${value} ${name.includes('Solar') ? 'KVA' : 'MVA'}`}
                       labelLine={false}
                     >
                       {cmdData.map((entry, index) => (
@@ -73,16 +73,16 @@ const Slide05PowerInfra = () => {
               <CardContent className="p-4 md:p-6">
                 <div className="space-y-3 md:space-y-4">
                   <div className="flex items-center justify-between p-3 md:p-4 bg-secondary rounded-lg">
-                    <span className="text-xs md:text-sm text-muted-foreground">Sanctioned CMD</span>
-                    <span className="text-xl md:text-2xl font-bold text-foreground">19 MW</span>
+                    <span className="text-xs md:text-sm text-muted-foreground">Present CMD</span>
+                    <span className="text-xl md:text-2xl font-bold text-foreground">19.5 MVA</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 md:p-4 bg-solar-orange/10 rounded-lg">
+                    <span className="text-xs md:text-sm text-muted-foreground">Solar Plant Generation</span>
+                    <span className="text-xl md:text-2xl font-bold text-solar-orange">6.6 KVA</span>
                   </div>
                   <div className="flex items-center justify-between p-3 md:p-4 bg-primary/10 rounded-lg">
-                    <span className="text-xs md:text-sm text-muted-foreground">Current Utilization</span>
-                    <span className="text-xl md:text-2xl font-bold text-primary">15 MW</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 md:p-4 bg-solar-blue/10 rounded-lg">
-                    <span className="text-xs md:text-sm text-muted-foreground">Available Headroom</span>
-                    <span className="text-xl md:text-2xl font-bold text-solar-blue">4 MW</span>
+                    <span className="text-xs md:text-sm text-muted-foreground">Total Capacity</span>
+                    <span className="text-xl md:text-2xl font-bold text-primary">26.1 MVA</span>
                   </div>
                 </div>
               </CardContent>

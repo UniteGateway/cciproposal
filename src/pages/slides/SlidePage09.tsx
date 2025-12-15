@@ -3,7 +3,7 @@ import Slide09BOOTOverview from "@/components/presentation/slides/Slide09BOOTOve
 
 const SlidePage09 = () => {
   return (
-    <SlideLayout currentSlide={9} totalSlides={18}>
+    <SlideLayout currentSlide={9} totalSlides={20}>
       <Slide09BOOTOverview />
     </SlideLayout>
   );

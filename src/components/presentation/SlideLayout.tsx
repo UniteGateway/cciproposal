@@ -3,7 +3,9 @@ import { ChevronLeft, ChevronRight, Globe, Phone, Mail, User } from "lucide-reac
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import SlideMenu from "./SlideMenu";
+import AutoPlayButton from "./AutoPlayButton";
 import uniteLogo from "@/assets/unite-logo.png";
+
 interface SlideLayoutProps {
   children: ReactNode;
   currentSlide: number;
@@ -11,7 +13,7 @@ interface SlideLayoutProps {
   showNavigation?: boolean;
 }
 
-const TOTAL_SLIDES = 18;
+const TOTAL_SLIDES = 20;
 
 const SlideLayout = ({
   children,
@@ -81,6 +83,7 @@ const SlideLayout = ({
 
           {showNavigation && (
             <div className="flex items-center gap-2">
+              <AutoPlayButton totalSlides={totalSlides} intervalSeconds={8} />
               {prevSlide ? (
                 <Button variant="outline" size="sm" asChild className="gap-1 h-8 md:h-9 text-xs md:text-sm">
                   <Link to={prevSlide}>

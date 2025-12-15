@@ -3,7 +3,7 @@ import Slide08ProjectStructuring from "@/components/presentation/slides/Slide08P
 
 const SlidePage08 = () => {
   return (
-    <SlideLayout currentSlide={8} totalSlides={18}>
+    <SlideLayout currentSlide={8} totalSlides={20}>
       <Slide08ProjectStructuring />
     </SlideLayout>
   );

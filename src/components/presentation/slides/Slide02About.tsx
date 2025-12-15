@@ -1,5 +1,6 @@
-import { Sun, Zap, Shield, Users, Award, Building2 } from "lucide-react";
+import { Sun, Zap, Shield, Users, Award, Building2, Globe } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import founderImg from "@/assets/founder.png";
 
 const capabilities = [
   {
@@ -34,6 +35,12 @@ const capabilities = [
   },
 ];
 
+const groupCompanies = [
+  { name: "Unite Group Inc.", location: "USA" },
+  { name: "Unite Developers Inc.", location: "USA" },
+  { name: "Unite Developers Global Inc.", location: "India" },
+];
+
 const Slide02About = () => {
   return (
     <div className="min-h-[calc(100vh-7rem)] md:min-h-[calc(100vh-7.5rem)] px-4 md:px-6 py-8 md:py-12">
@@ -46,10 +53,26 @@ const Slide02About = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground">
             About <span className="solar-gradient-text">Unite Solar</span>
           </h2>
-          <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Leading solar EPC company delivering sustainable energy solutions 
-            for industrial and commercial establishments across India.
+          <p className="text-sm md:text-lg text-muted-foreground max-w-3xl mx-auto">
+            Unite Solar, established in India in 2023, is powered by <strong className="text-foreground">Unite Developers Inc., USA</strong> and <strong className="text-foreground">Unite Developers Global Inc, India</strong>, 
+            promoted by <strong className="text-solar-orange">Dr. Ravi Chandra</strong>, a visionary leader in renewable energy and sustainable infrastructure development.
           </p>
+        </div>
+
+        {/* Group Companies Banner */}
+        <div className="bg-gradient-to-r from-primary/10 via-solar-blue/10 to-solar-orange/10 rounded-2xl p-4 md:p-6">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Globe className="w-5 h-5 text-primary" />
+            <h3 className="text-lg font-semibold text-foreground">Part of Unite Group</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {groupCompanies.map((company) => (
+              <div key={company.name} className="bg-card rounded-xl p-4 text-center border border-border">
+                <div className="font-bold text-foreground">{company.name}</div>
+                <div className="text-sm text-solar-orange">{company.location}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Capabilities Grid */}
@@ -76,7 +99,7 @@ const Slide02About = () => {
           {[
             { value: "100+", label: "MW Commissioned" },
             { value: "50+", label: "Happy Clients" },
-            { value: "10+", label: "Years Experience" },
+            { value: "25+", label: "Years Experience" },
             { value: "24/7", label: "O&M Support" },
           ].map((stat) => (
             <div key={stat.label} className="text-center p-3 md:p-4 bg-secondary rounded-xl">

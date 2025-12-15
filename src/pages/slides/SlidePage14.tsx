@@ -3,7 +3,7 @@ import Slide14PPAScope from "@/components/presentation/slides/Slide14PPAScope";
 
 const SlidePage14 = () => {
   return (
-    <SlideLayout currentSlide={14} totalSlides={18}>
+    <SlideLayout currentSlide={14} totalSlides={20}>
       <Slide14PPAScope />
     </SlideLayout>
   );
