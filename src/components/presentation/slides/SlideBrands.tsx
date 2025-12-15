@@ -1,17 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
-
-const brands = [
-  { name: "Vikram Solar", category: "Modules", logo: "https://www.vikramsolar.com/wp-content/uploads/2023/03/vikram-solar-logo.png" },
-  { name: "Adani", category: "Modules", logo: "https://www.adanisolar.com/sites/default/files/logo.png" },
-  { name: "Tata Power Solar", category: "Modules", logo: "https://upload.wikimedia.org/wikipedia/commons/3/35/Tata_Power_Solar_logo.png" },
-  { name: "Goldi Solar", category: "Modules", logo: "https://www.goldisolar.com/wp-content/uploads/2023/01/goldi-solar-logo.png" },
-  { name: "Waaree", category: "Modules", logo: "https://www.waaree.com/assets/images/logos/waaree-logo.png" },
-  { name: "Sunplus", category: "Modules", logo: null },
-  { name: "Sungrow", category: "Inverters", logo: "https://en.sungrowpower.com/image/logo.png" },
-  { name: "Polycab", category: "Cables", logo: "https://www.polycab.com/wp-content/uploads/2020/10/polycab-logo.png" },
-  { name: "Renewsys", category: "Modules", logo: "https://www.renewsysindia.com/images/logo.png" },
-  { name: "Siemens", category: "Equipment", logo: "https://upload.wikimedia.org/wikipedia/commons/5/55/Siemens-logo.svg" },
-];
+import brandsGridImg from "@/assets/brands-grid.png";
 
 const SlideBrands = () => {
   return (
@@ -30,36 +17,13 @@ const SlideBrands = () => {
           </p>
         </div>
 
-        {/* Brands Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
-          {brands.map((brand, index) => (
-            <Card
-              key={brand.name}
-              className="border-border bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group overflow-hidden"
-              style={{ animationDelay: `${index * 50}ms` }}
-            >
-              <CardContent className="p-4 md:p-6 text-center space-y-3">
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg p-2">
-                  {brand.logo ? (
-                    <img 
-                      src={brand.logo} 
-                      alt={`${brand.name} logo`}
-                      className="w-full h-full object-contain"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        e.currentTarget.nextElementSibling?.classList.remove('hidden');
-                      }}
-                    />
-                  ) : null}
-                  <span className={`text-primary font-bold text-xl ${brand.logo ? 'hidden' : ''}`}>{brand.name.charAt(0)}</span>
-                </div>
-                <div>
-                  <h3 className="font-bold text-foreground text-sm md:text-base">{brand.name}</h3>
-                  <p className="text-xs text-muted-foreground">{brand.category}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Brands Grid Image */}
+        <div className="flex justify-center">
+          <img 
+            src={brandsGridImg} 
+            alt="Leading Solar Brands & Products - Vikram Solar, Adani, Tata Power Solar, Waaree, Sunplus, Sungrow, Polycab, Siemens"
+            className="max-w-full h-auto rounded-2xl shadow-xl"
+          />
         </div>
 
         {/* Quality Assurance */}
