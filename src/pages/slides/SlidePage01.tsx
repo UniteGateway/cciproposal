@@ -7,7 +7,7 @@ import cciLogo from "@/assets/cci-logo.png";
 
 const SlidePage01 = () => {
   return (
-    <SlideLayout currentSlide={1} totalSlides={18}>
+    <SlideLayout currentSlide={1} totalSlides={20}>
       <div className="min-h-[calc(100vh-7.5rem)] relative overflow-hidden">
         {/* Background Image Overlay */}
         <div 

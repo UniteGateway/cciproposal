@@ -3,7 +3,7 @@ import Slide04LandAvailability from "@/components/presentation/slides/Slide04Lan
 
 const SlidePage04 = () => {
   return (
-    <SlideLayout currentSlide={4} totalSlides={18}>
+    <SlideLayout currentSlide={4} totalSlides={20}>
       <Slide04LandAvailability />
     </SlideLayout>
   );

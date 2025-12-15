@@ -3,8 +3,9 @@ import { TrendingUp, CheckCircle2 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const comparisonData = [
-  { name: "Current CMD", value: 19, fill: "hsl(210, 100%, 40%)" },
-  { name: "Required CMD", value: 25, fill: "hsl(142, 71%, 35%)" },
+  { name: "Present CMD", value: 19.5, fill: "hsl(210, 100%, 40%)" },
+  { name: "Solar Addition", value: 6.6, fill: "hsl(24, 95%, 53%)" },
+  { name: "Required CMD", value: 26.1, fill: "hsl(142, 71%, 35%)" },
 ];
 
 const benefits = [
@@ -82,15 +83,15 @@ const Slide06CMDEnhancement = () => {
               <CardContent className="p-4 md:p-6">
                 <div className="grid grid-cols-3 gap-2 md:gap-4 text-center">
                   <div className="p-3 md:p-4 bg-solar-blue/10 rounded-lg">
-                    <div className="text-xl md:text-3xl font-bold text-solar-blue">19 MW</div>
-                    <div className="text-xs md:text-sm text-muted-foreground mt-1">Current</div>
+                    <div className="text-xl md:text-3xl font-bold text-solar-blue">19.5 MVA</div>
+                    <div className="text-xs md:text-sm text-muted-foreground mt-1">Present CMD</div>
                   </div>
                   <div className="p-3 md:p-4 bg-solar-orange/10 rounded-lg">
-                    <div className="text-xl md:text-3xl font-bold text-solar-orange">+6 MW</div>
-                    <div className="text-xs md:text-sm text-muted-foreground mt-1">Increase</div>
+                    <div className="text-xl md:text-3xl font-bold text-solar-orange">+6.6 KVA</div>
+                    <div className="text-xs md:text-sm text-muted-foreground mt-1">Solar Plant</div>
                   </div>
                   <div className="p-3 md:p-4 bg-primary/10 rounded-lg">
-                    <div className="text-xl md:text-3xl font-bold text-primary">25 MW</div>
+                    <div className="text-xl md:text-3xl font-bold text-primary">26.1 MVA</div>
                     <div className="text-xs md:text-sm text-muted-foreground mt-1">Required</div>
                   </div>
                 </div>

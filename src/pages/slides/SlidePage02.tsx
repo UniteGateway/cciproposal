@@ -3,7 +3,7 @@ import Slide02About from "@/components/presentation/slides/Slide02About";
 
 const SlidePage02 = () => {
   return (
-    <SlideLayout currentSlide={2} totalSlides={18}>
+    <SlideLayout currentSlide={2} totalSlides={20}>
       <Slide02About />
     </SlideLayout>
   );

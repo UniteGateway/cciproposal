@@ -3,7 +3,7 @@ import Slide13PPACommercial from "@/components/presentation/slides/Slide13PPACom
 
 const SlidePage13 = () => {
   return (
-    <SlideLayout currentSlide={13} totalSlides={18}>
+    <SlideLayout currentSlide={13} totalSlides={20}>
       <Slide13PPACommercial />
     </SlideLayout>
   );

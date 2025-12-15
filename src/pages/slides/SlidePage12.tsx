@@ -3,7 +3,7 @@ import Slide12PPAOverview from "@/components/presentation/slides/Slide12PPAOverv
 
 const SlidePage12 = () => {
   return (
-    <SlideLayout currentSlide={12} totalSlides={18}>
+    <SlideLayout currentSlide={12} totalSlides={20}>
       <Slide12PPAOverview />
     </SlideLayout>
   );

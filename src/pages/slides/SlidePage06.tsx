@@ -3,7 +3,7 @@ import Slide06CMDEnhancement from "@/components/presentation/slides/Slide06CMDEn
 
 const SlidePage06 = () => {
   return (
-    <SlideLayout currentSlide={6} totalSlides={18}>
+    <SlideLayout currentSlide={6} totalSlides={20}>
       <Slide06CMDEnhancement />
     </SlideLayout>
   );

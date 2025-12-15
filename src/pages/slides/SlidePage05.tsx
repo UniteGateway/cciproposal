@@ -3,7 +3,7 @@ import Slide05PowerInfra from "@/components/presentation/slides/Slide05PowerInfr
 
 const SlidePage05 = () => {
   return (
-    <SlideLayout currentSlide={5} totalSlides={18}>
+    <SlideLayout currentSlide={5} totalSlides={20}>
       <Slide05PowerInfra />
     </SlideLayout>
   );

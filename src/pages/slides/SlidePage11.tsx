@@ -3,7 +3,7 @@ import Slide11BOOTPostTransfer from "@/components/presentation/slides/Slide11BOO
 
 const SlidePage11 = () => {
   return (
-    <SlideLayout currentSlide={11} totalSlides={18}>
+    <SlideLayout currentSlide={11} totalSlides={20}>
       <Slide11BOOTPostTransfer />
     </SlideLayout>
   );
