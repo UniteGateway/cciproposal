@@ -5,20 +5,20 @@ const landDetails = [
   {
     icon: Maximize2,
     label: "Total Land Available",
-    value: "50+ Acres",
+    value: "400+ Acres",
     description: "Contiguous land parcel suitable for solar installation",
   },
   {
-    icon: Sun,
-    label: "Generation Capacity",
-    value: "20+ MW",
-    description: "Based on land area and optimal panel spacing",
+    icon: Zap,
+    label: "Substation Injection",
+    value: "6.6 KVA",
+    description: "Power injection capacity to substation",
   },
   {
-    icon: Zap,
-    label: "Annual Generation",
-    value: "~30 Million Units",
-    description: "Estimated annual energy production",
+    icon: Sun,
+    label: "Future CMD Expansion",
+    value: "6 MVA",
+    description: "Additional CMD available for future expansion",
   },
 ];
 
