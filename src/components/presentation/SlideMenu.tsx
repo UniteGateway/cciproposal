@@ -99,16 +99,16 @@ const DesktopMenu = () => {
               {group.title}
             </NavigationMenuTrigger>
             <NavigationMenuContent className="absolute left-0 top-full">
-              <ul className="grid w-[220px] gap-1 p-2 bg-card border border-border shadow-lg rounded-md">
+              <ul className="grid w-[220px] gap-1 p-2 bg-solar-blue border border-solar-orange/30 shadow-lg rounded-md">
                 {group.items.map((item) => (
                   <li key={item.href}>
                     <NavigationMenuLink asChild>
                       <Link
                         to={item.href}
                         className={cn(
-                          "block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors text-foreground",
-                          "hover:bg-solar-orange/20 hover:text-solar-orange focus:bg-solar-orange/20 focus:text-solar-orange",
-                          currentPath === item.href && "bg-solar-orange/25 text-solar-orange font-medium"
+                          "block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors text-solar-orange",
+                          "hover:bg-solar-orange/20 hover:text-white focus:bg-solar-orange/20 focus:text-white",
+                          currentPath === item.href && "bg-solar-orange/30 text-white font-medium"
                         )}
                       >
                         {item.title}
