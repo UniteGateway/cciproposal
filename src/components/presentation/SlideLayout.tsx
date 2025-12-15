@@ -13,7 +13,7 @@ interface SlideLayoutProps {
   showNavigation?: boolean;
 }
 
-const TOTAL_SLIDES = 20;
+const TOTAL_SLIDES = 22;
 
 const SlideLayout = ({
   children,

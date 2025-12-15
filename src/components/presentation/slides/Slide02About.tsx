@@ -1,4 +1,4 @@
-import { Sun, Zap, Shield, Users, Award, Building2, Globe } from "lucide-react";
+import { Sun, Zap, Shield, Users, Award, Building2, Globe, Clock, Target } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import founderImg from "@/assets/founder.png";
 
@@ -26,7 +26,7 @@ const capabilities = [
   {
     icon: Award,
     title: "Proven Track Record",
-    description: "Successfully commissioned 100+ MW across India",
+    description: "Successfully commissioned 1000+ MW across India with Solaris",
   },
   {
     icon: Building2,
@@ -97,9 +97,9 @@ const Slide02About = () => {
         {/* Stats Bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 pt-4 md:pt-6">
           {[
-            { value: "100+", label: "MW Commissioned" },
-            { value: "50+", label: "Happy Clients" },
-            { value: "25+", label: "Years Experience" },
+            { value: "1000+", label: "MW Completed with Solaris" },
+            { value: "15+", label: "Years Combined Experience" },
+            { value: "100+", label: "Projects Delivered" },
             { value: "24/7", label: "O&M Support" },
           ].map((stat) => (
             <div key={stat.label} className="text-center p-3 md:p-4 bg-secondary rounded-xl">

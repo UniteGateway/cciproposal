@@ -25,7 +25,8 @@ import SlidePage17 from "./pages/slides/SlidePage17";
 import SlidePage18 from "./pages/slides/SlidePage18";
 import SlidePage19 from "./pages/slides/SlidePage19";
 import SlidePage20 from "./pages/slides/SlidePage20";
-
+import SlidePage21 from "./pages/slides/SlidePage21";
+import SlidePage22 from "./pages/slides/SlidePage22";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -56,6 +57,8 @@ const App = () => (
           <Route path="/slide/18" element={<SlidePage18 />} />
           <Route path="/slide/19" element={<SlidePage19 />} />
           <Route path="/slide/20" element={<SlidePage20 />} />
+          <Route path="/slide/21" element={<SlidePage21 />} />
+          <Route path="/slide/22" element={<SlidePage22 />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
