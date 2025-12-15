@@ -1,16 +1,16 @@
-import { Award, Shield, Star } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const brands = [
-  { name: "Vikram Solar", category: "Modules" },
-  { name: "Adani", category: "Modules" },
-  { name: "Tata Power Solar", category: "Modules" },
-  { name: "Goldi Solar", category: "Modules" },
-  { name: "Waaree", category: "Modules" },
-  { name: "Sunplus", category: "Modules" },
-  { name: "Sungrow", category: "Inverters" },
-  { name: "Polycab", category: "Cables" },
-  { name: "Renewsys", category: "Modules" },
-  { name: "Siemens", category: "Equipment" },
+  { name: "Vikram Solar", category: "Modules", color: "from-orange-500 to-orange-600" },
+  { name: "Adani", category: "Modules", color: "from-blue-600 to-blue-700" },
+  { name: "Tata Power Solar", category: "Modules", color: "from-blue-800 to-blue-900" },
+  { name: "Goldi Solar", category: "Modules", color: "from-yellow-500 to-yellow-600" },
+  { name: "Waaree", category: "Modules", color: "from-red-500 to-red-600" },
+  { name: "Sunplus", category: "Modules", color: "from-green-500 to-green-600" },
+  { name: "Sungrow", category: "Inverters", color: "from-orange-400 to-orange-500" },
+  { name: "Polycab", category: "Cables", color: "from-red-600 to-red-700" },
+  { name: "Renewsys", category: "Modules", color: "from-green-600 to-green-700" },
+  { name: "Siemens", category: "Equipment", color: "from-teal-500 to-teal-600" },
 ];
 
 const SlideBrands = () => {
@@ -19,8 +19,8 @@ const SlideBrands = () => {
       <div className="max-w-6xl mx-auto space-y-6 md:space-y-10">
         {/* Header */}
         <div className="text-center space-y-3 md:space-y-4 animate-fade-in">
-          <span className="inline-block px-3 md:px-4 py-1 md:py-1.5 bg-solar-orange/10 text-solar-orange rounded-full text-xs md:text-sm font-medium">
-            Quality Assurance
+          <span className="inline-block px-3 md:px-4 py-1 md:py-1.5 bg-primary/10 text-primary rounded-full text-xs md:text-sm font-medium">
+            Quality Partners
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground">
             Brands We <span className="solar-gradient-text">Use</span>
@@ -31,56 +31,41 @@ const SlideBrands = () => {
         </div>
 
         {/* Brands Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
           {brands.map((brand, index) => (
-            <div
+            <Card
               key={brand.name}
-              className="group bg-card border border-border rounded-xl p-4 md:p-6 text-center hover:shadow-lg hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
+              className="border-border bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group overflow-hidden"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto rounded-xl bg-gradient-to-br from-primary/20 to-solar-blue/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                <Star className="w-6 h-6 md:w-8 md:h-8 text-primary" />
-              </div>
-              <h3 className="font-bold text-foreground text-sm md:text-base">{brand.name}</h3>
-              <p className="text-xs text-muted-foreground mt-1">{brand.category}</p>
-            </div>
+              <CardContent className="p-4 md:p-6 text-center space-y-3">
+                <div className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br ${brand.color} flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg`}>
+                  <span className="text-white font-bold text-xl">{brand.name.charAt(0)}</span>
+                </div>
+                <div>
+                  <h3 className="font-bold text-foreground text-sm md:text-base">{brand.name}</h3>
+                  <p className="text-xs text-muted-foreground">{brand.category}</p>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
-        {/* Quality Assurance Section */}
-        <div className="grid md:grid-cols-3 gap-6 pt-4">
-          <div className="flex items-start gap-4 p-5 bg-card border border-border rounded-xl">
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <Award className="w-6 h-6 text-primary" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-foreground">Tier-1 Manufacturers</h4>
-              <p className="text-sm text-muted-foreground mt-1">
-                All components sourced from globally recognized Tier-1 manufacturers
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4 p-5 bg-card border border-border rounded-xl">
-            <div className="w-12 h-12 rounded-lg bg-solar-blue/10 flex items-center justify-center flex-shrink-0">
-              <Shield className="w-6 h-6 text-solar-blue" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-foreground">25 Year Warranty</h4>
-              <p className="text-sm text-muted-foreground mt-1">
-                Comprehensive warranties backed by manufacturer guarantees
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4 p-5 bg-card border border-border rounded-xl">
-            <div className="w-12 h-12 rounded-lg bg-solar-orange/10 flex items-center justify-center flex-shrink-0">
-              <Star className="w-6 h-6 text-solar-orange" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-foreground">Quality Certified</h4>
-              <p className="text-sm text-muted-foreground mt-1">
-                IEC, BIS certified components for reliability and performance
-              </p>
-            </div>
+        {/* Quality Assurance */}
+        <div className="bg-gradient-to-r from-primary/10 via-solar-blue/10 to-solar-orange/10 rounded-2xl p-6 md:p-8">
+          <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 text-center">Why These Brands?</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { title: "Tier 1", desc: "Bankable manufacturers" },
+              { title: "Warranty", desc: "25+ years performance guarantee" },
+              { title: "Efficiency", desc: "Latest technology modules" },
+              { title: "Reliability", desc: "Proven field performance" },
+            ].map((item) => (
+              <div key={item.title} className="text-center p-4 bg-card rounded-xl">
+                <div className="text-lg font-bold text-primary">{item.title}</div>
+                <div className="text-sm text-muted-foreground">{item.desc}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

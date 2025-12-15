@@ -1,21 +1,41 @@
-import { Handshake, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const partners = [
   {
-    name: "SESOLA",
-    description: "Strategic solar development partner",
+    name: "SOLARIS",
+    description: "Strategic solar development partner with 1000+ MW experience",
     type: "Technology Partner",
+    initial: "S",
+    color: "from-red-500 to-red-600",
+  },
+  {
+    name: "SAATVIK",
+    description: "Premium solar module manufacturing partner",
+    type: "Manufacturing Partner",
+    initial: "S",
+    color: "from-green-500 to-green-600",
   },
   {
     name: "FOUR SOLAR",
     description: "EPC collaboration partner",
     type: "EPC Partner",
+    initial: "4",
+    color: "from-yellow-500 to-yellow-600",
   },
   {
     name: "UNISCAN",
     description: "Solar monitoring & analytics partner",
     type: "Technology Partner",
+    initial: "U",
+    color: "from-orange-500 to-orange-600",
+  },
+  {
+    name: "SESOLA",
+    description: "Strategic solar development partner",
+    type: "Development Partner",
+    initial: "S",
+    color: "from-blue-500 to-blue-600",
   },
 ];
 
@@ -37,23 +57,23 @@ const SlidePartners = () => {
         </div>
 
         {/* Partners Grid */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {partners.map((partner, index) => (
             <Card
               key={partner.name}
               className="border-border bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <CardContent className="p-6 space-y-4">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-solar-orange to-solar-orange/70 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Handshake className="w-8 h-8 text-primary-foreground" />
+              <CardContent className="p-5 md:p-6 space-y-4">
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${partner.color} flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg`}>
+                  <span className="text-white font-bold text-2xl">{partner.initial}</span>
                 </div>
                 <div>
                   <span className="text-xs text-solar-orange font-medium uppercase tracking-wider">
                     {partner.type}
                   </span>
-                  <h3 className="text-2xl font-bold text-foreground mt-1">{partner.name}</h3>
-                  <p className="text-muted-foreground mt-2">{partner.description}</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mt-1">{partner.name}</h3>
+                  <p className="text-sm text-muted-foreground mt-2">{partner.description}</p>
                 </div>
                 <div className="flex items-center gap-2 text-primary text-sm font-medium cursor-pointer hover:gap-3 transition-all">
                   <span>Learn more</span>

@@ -3,7 +3,7 @@ import SlideBrands from "@/components/presentation/slides/SlideBrands";
 
 const SlidePage20 = () => {
   return (
-    <SlideLayout currentSlide={20} totalSlides={20}>
+    <SlideLayout currentSlide={20} totalSlides={22}>
       <SlideBrands />
     </SlideLayout>
   );

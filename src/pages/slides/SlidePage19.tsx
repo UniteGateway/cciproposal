@@ -3,7 +3,7 @@ import SlidePartners from "@/components/presentation/slides/SlidePartners";
 
 const SlidePage19 = () => {
   return (
-    <SlideLayout currentSlide={19} totalSlides={20}>
+    <SlideLayout currentSlide={19} totalSlides={22}>
       <SlidePartners />
     </SlideLayout>
   );

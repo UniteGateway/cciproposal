@@ -76,6 +76,13 @@ const menuGroups = [
       { title: "Brands We Use", href: "/slide/20" },
     ],
   },
+  {
+    title: "Products & Services",
+    items: [
+      { title: "Our Products", href: "/slide/21" },
+      { title: "Our Services", href: "/slide/22" },
+    ],
+  },
 ];
 
 // Desktop Menu
