@@ -1,4 +1,17 @@
-import brandsGridImg from "@/assets/brands-grid.png";
+import { Card, CardContent } from "@/components/ui/card";
+
+const brands = [
+  { name: "Vikram Solar", category: "Modules", color: "from-orange-500 to-orange-600" },
+  { name: "Adani", category: "Modules", color: "from-blue-600 to-blue-700" },
+  { name: "Tata Power Solar", category: "Modules", color: "from-blue-800 to-blue-900" },
+  { name: "Goldi Solar", category: "Modules", color: "from-yellow-500 to-yellow-600" },
+  { name: "Waaree", category: "Modules", color: "from-red-500 to-red-600" },
+  { name: "Sunplus", category: "Modules", color: "from-green-500 to-green-600" },
+  { name: "Sungrow", category: "Inverters", color: "from-orange-400 to-orange-500" },
+  { name: "Polycab", category: "Cables", color: "from-red-600 to-red-700" },
+  { name: "Renewsys", category: "Modules", color: "from-green-600 to-green-700" },
+  { name: "Siemens", category: "Equipment", color: "from-teal-500 to-teal-600" },
+];
 
 const SlideBrands = () => {
   return (
@@ -17,13 +30,25 @@ const SlideBrands = () => {
           </p>
         </div>
 
-        {/* Brands Grid Image */}
-        <div className="flex justify-center">
-          <img 
-            src={brandsGridImg} 
-            alt="Leading Solar Brands & Products - Vikram Solar, Adani, Tata Power Solar, Waaree, Sunplus, Sungrow, Polycab, Siemens"
-            className="max-w-full h-auto rounded-2xl shadow-xl"
-          />
+        {/* Brands Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
+          {brands.map((brand, index) => (
+            <Card
+              key={brand.name}
+              className="border-border bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group overflow-hidden"
+              style={{ animationDelay: `${index * 50}ms` }}
+            >
+              <CardContent className="p-4 md:p-6 text-center space-y-3">
+                <div className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br ${brand.color} flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg`}>
+                  <span className="text-white font-bold text-xl">{brand.name.charAt(0)}</span>
+                </div>
+                <div>
+                  <h3 className="font-bold text-foreground text-sm md:text-base">{brand.name}</h3>
+                  <p className="text-xs text-muted-foreground">{brand.category}</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Quality Assurance */}
